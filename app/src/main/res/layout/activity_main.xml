@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <com.linwei.floattextlibrary.FloatTextView
+        android:id="@+id/float_text_view_one"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:ftvAnimDuration="5000"
+        app:ftvBackground="@drawable/shape_text_banner_bg"
+        app:ftvDirection="right_to_left"
+        app:ftvGravity="left"
+        app:ftvHorizontalPadding="10dp"
+        app:ftvInterval="3000"
+        app:ftvSingleLine="true"
+        app:ftvTextColor="@color/white"
+        app:ftvTextSize="18sp"
+        app:ftvVerticalPadding="5dp"
+        tools:ignore="MissingConstraints" />
+
+    <com.linwei.floattextlibrary.FloatTextView
+        android:id="@+id/float_text_view_two"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:ftvAnimDuration="5000"
+        app:ftvBackground="@drawable/shape_text_banner_bg"
+        app:ftvDirection="right_to_left"
+        app:ftvGravity="left"
+        app:ftvHorizontalPadding="10dp"
+        app:ftvInterval="3000"
+        app:ftvSingleLine="true"
+        app:ftvTextColor="@color/white"
+        app:ftvTextSize="18sp"
+        app:ftvVerticalPadding="5dp"
+        tools:ignore="MissingConstraints" />
+
+</LinearLayout>

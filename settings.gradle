@@ -1,0 +1,3 @@
+rootProject.name='FloatTextView'
+include ':app'
+include ':floattextlibrary'

@@ -17,12 +17,29 @@ android {
     }
 
     buildTypes {
+        debug {
+            minifyEnabled false //混淆
+            buildConfigField "boolean", "showLog", "true"//是否显示Log
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        preview {
+            minifyEnabled false //混淆
+            buildConfigField "boolean", "showLog", "true"//是否显示Log
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
         release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            minifyEnabled false //混淆
+            buildConfigField "boolean", "showLog", "false"//是否显示Log
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
 
+}
+
+tasks.withType(Jar){jarTask->
+    if(jarTask.name.equals('packageReleaseJar')){
+        jarTask.from android.sourceSets.main.java.srcDirs
+    }
 }
 
 dependencies {
